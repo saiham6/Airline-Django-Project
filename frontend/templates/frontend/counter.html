@@ -1,0 +1,32 @@
+<head>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<style>
+    #app {
+        text-align: center;
+    }
+
+    #problem {
+        font-size: 72px;
+    }
+
+    #winner {
+        font-size: 72px;
+        color: green;
+    }
+</style> 
+{% extends 'frontend/layout.html' %} 
+
+
+
+{% block body %}
+<h1>Counter</h1>
+{% load static %}
+<div id="app">
+    <script type="text/babel" src="{% static 'frontend/counter.jsx' %}"></script>
+
+</div>
+
+{% endblock %}

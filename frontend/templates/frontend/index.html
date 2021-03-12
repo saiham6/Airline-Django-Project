@@ -1,0 +1,30 @@
+{% extends 'frontend/layout.html' %}
+
+{% block body %}
+<h1>Hello World!</h1>
+<script>
+    // function hello(){
+    //     // alert('Hello, World');
+    //     if (document.querySelector('h1').innerHTML === "Hello World!"){
+    //         document.querySelector('h1').innerHTML = "Goodbye!";
+    //     }
+    //     else {
+    //         document.querySelector('h1').innerHTML = "Hello World!";
+    //     }
+    // }
+
+    document.addEventListener('DOMContentLoaded',function(){
+        document.querySelector('form').onsubmit = function(){
+            const name = document.querySelector('#name').value;
+            alert(`Hello ${name}`)
+        };
+    });
+</script>
+<!-- <button class="btn btn-primary" onclick="hello()">Click here!</button> -->
+<a name="" id="" class="btn btn-secondary" href="{% url 'frontend:counter' %}" role="button">Counter</a>
+<form>
+    <input autofocus id="name" placeholder="Name" type="text">
+    <input type="submit">
+</form>
+
+{% endblock %}
